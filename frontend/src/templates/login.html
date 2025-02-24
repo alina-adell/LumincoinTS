@@ -1,0 +1,26 @@
+<section class="login-content row m-1 d-flex justify-content-center align-content-center vh-100">
+	<div class="login-box col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 p-2">
+		<figure class="logo text-center">
+			<img src="images/Logo.png" alt="Логотип">
+		</figure>
+		<h1 class="text-center mt-5">Вход</h1>
+		<form id="formLogin" class="row g-3 p-2">
+			<fieldset class="input-group mb-0 p-0">
+				<label for="emailInput" class="input-group-text"><img src="images/mail.png" alt="mail"></label>
+				<input id="emailInput" type="email" class="form-control" placeholder="Электронная почта">
+				<p id="emailInputFeedback" class="invalid-feedback m-0">Введите email</p>
+			</fieldset>
+			<fieldset class="input-group mb-0 mt-2 p-0">
+				<label for="passwordInput" class="input-group-text"><img src="images/lock.png" alt="lock"></label>
+				<input id="passwordInput" type="password" class="form-control" placeholder="Пароль">
+				<p id="passwordInputFeedback" class="invalid-feedback m-0">Заполните пароль</p>
+			</fieldset>
+			<fieldset class="form-check pe-0 mt-2">
+				<input class="form-check-input text-lg-start" type="checkbox" value="" id="flexCheckDefault">
+				<label class="form-check-label w-100" for="flexCheckDefault">Запомнить меня</label>
+			</fieldset>
+			<button type="button" class="btn btn-primary mt-4 w-100" id="submitLogin">Войти</button>
+		</form>
+		<p class="mt-2 mb-0">Ещё нет аккаунта? <a href="/#/signup">Пройдите регистрацию</a></p>
+	</div>
+</section>

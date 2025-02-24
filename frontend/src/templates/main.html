@@ -1,0 +1,37 @@
+ <h1 class="mb-5">Главная</h1>
+<div class="row g-0 d-flex justify-content-center justify-content-md-start gap-3">
+	<button type="button" class="btn btn-main">Сегодня</button>
+	<button type="button" class="btn btn-main" data-period="week">Неделя</button>
+	<button type="button" class="btn btn-main" data-period="month">Месяц</button>
+	<button type="button" class="btn btn-main" data-period="year">Год</button>
+	<button type="button" class="btn btn-main" data-period="all">Все</button>
+	<button type="button" class="btn btn-main" data-period="interval">Интервал</button>
+	<fieldset class="input-wrap d-flex align-items-center gap-2">
+		<label for="inputFromDate">с</label>
+		<div class="d-flex flex-column">
+			<input type="date" class="d-inline-block" id="inputFromDate" data-period="dateFrom"></input>
+			<p id="inputFromDateFeedback" class="invalid-feedback m-0">Выберите дату</p>
+		</div>
+	</fieldset>
+	<fieldset class="input-wrap d-flex align-items-center gap-2">
+		<label for="inputToDate">по</label>
+		<div class="d-flex flex-column">
+			<input type="date" class="d-inline" id="inputToDate" data-period="dateTo"></input>
+			<p id="inputToDateFeedback" class="invalid-feedback m-0">Выберите дату</p>
+		</div>
+	</fieldset>
+</div>
+<div class="row d-flex flex-column align-items-center flex-lg-row g-0 mt-5 pt-2">
+	<figure class="col-12 col-md-6 d-flex flex-column align-items-center">
+		<h2 class="text-center">Доходы</h2>
+		<div class="border-chart g-0 w-100 d-flex justify-content-center">
+			<canvas id="revenuesChart" class="canvas-revenues" aria-label="Revenue Chart"></canvas>
+		</div>
+	</figure>
+	<figure class="col-12 col-md-6 d-flex flex-column align-items-center">
+		<h2 class="text-center">Расходы</h2>
+		<div class="g-0 w-100 d-flex justify-content-center">
+			<canvas id="expensesChart" class="canvas-expenses" aria-label="Expense Chart"></canvas>
+		</div>
+	</figure>
+</div>

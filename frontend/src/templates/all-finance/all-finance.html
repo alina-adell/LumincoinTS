@@ -1,0 +1,56 @@
+<h1 class="mb-4">Доходы и расходы</h1>
+<div
+    class="action d-flex flex-column justify-content-center justify-content-md-start flex-sm-row gap-2 mb-4">
+  <button id="addRevenue" class="btn btn-success">Создать доход</button>
+  <button id="addExpense" class="btn btn-danger">Создать расход</button>
+</div>
+<div class="row d-flex justify-content-center justify-content-md-start gap-3 g-0 mb-4">
+  <button type="button" class="btn btn-main">Сегодня</button>
+  <button type="button" class="btn btn-main" data-period="week">Неделя</button>
+  <button type="button" class="btn btn-main" data-period="month">Месяц</button>
+  <button type="button" class="btn btn-main" data-period="year">Год</button>
+  <button type="button" class="btn btn-main" data-period="all">Все</button>
+  <button type="button" class="btn btn-main" data-period="interval">Интервал</button>
+  <fieldset class="input-wrap d-flex align-items-center gap-2">
+    <label for="inputFromDate">с</label>
+    <div class="d-flex flex-column">
+      <input type="date" class="d-inline-block" id="inputFromDate" data-period="dateFrom"></input>
+      <p id="inputFromDateFeedback" class="invalid-feedback m-0">Выберите дату</p>
+    </div>
+  </fieldset>
+  <fieldset class="input-wrap d-flex align-items-center gap-2">
+    <label for="inputToDate">по</label>
+    <div class="d-flex flex-column">
+      <input type="date" class="d-inline" id="inputToDate" data-period="dateTo"></input>
+      <p id="inputToDateFeedback" class="invalid-feedback m-0">Выберите дату</p>
+    </div>
+  </fieldset>
+</div>
+<div class="table-responsive">
+  <table class="table table-hover text-center">
+    <thead class="border-top">
+    <tr>
+      <th>№ операции</th>
+      <th>Тип</th>
+      <th>Категория</th>
+      <th>Сумма</th>
+      <th>Дата</th>
+      <th>Комментарий</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+</div>
+
+<figure id="modal" class="modal justify-content-center align-items-center w-100 h-100">
+  <div class="p-4 rounded d-flex flex-column align-items-center gap-3 bg-light">
+    <div class="modal-text p-0 m-0 text-center">
+      <p class="p-0 m-0 fw-bold">Вы действительно хотите удалить операцию?</p>
+    </div>
+    <div class="modal-action d-flex gap-2">
+      <button id="btnRemove" class="btn btn-success">Да, удалить</button>
+      <button id="btnCancel" class="btn btn-danger">Не удалять</button>
+    </div>
+  </div>
+</figure>

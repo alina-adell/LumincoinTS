@@ -1,0 +1,231 @@
+a {
+    text-decoration: none!important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #000;
+}
+
+.btn {
+    border: none;
+}
+
+.icon-link {
+    filter: none; /* Без фильтра по умолчанию */
+    transition: filter 0.3s ease;
+}
+
+.link-sidebar {
+    height: 40px;
+}
+
+.link-sidebar:focus .icon-link, .link-sidebar:hover .icon-link {
+    filter: brightness(0) invert(1);
+}
+
+.link-sidebar:focus, .link-sidebar:hover {
+    background-color: #007bff;
+    color: white;
+    outline: none;
+}
+
+.link-sidebar.active-link {
+    background-color: #007bff;
+    color: white;
+    outline: none;
+}
+
+.menu {
+    font-size: 14px;
+}
+
+.menu a img {
+    width: 15px;
+    height: 15px;
+}
+
+.sidebar {
+    max-width: 220px;
+}
+
+.details-link-drop[open] {
+    border: 1px solid #007bff;
+    border-radius: 7px;
+}
+
+.details-link-drop[open] summary {
+    background-color: #007bff;;
+    color: white;
+}
+
+.details-link-drop summary {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details-link-drop summary:hover,
+.details-link-drop summary:focus {
+    background-color: #007bff;
+    color: white;
+    outline: none;
+}
+
+.details-link-drop summary:after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    right: 30px;
+    background-image: url("../images/svg/chevron-right.svg");
+}
+
+.details-link-drop summary:hover:after,
+.details-link-drop summary:focus:after {
+    background-image: url("../images/svg/chevron-right-white.svg");
+}
+
+.details-link-drop[open] summary:after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-image: url("../images/svg/chevron-right.svg");
+    transform: rotate(90deg);
+}
+
+.details-link-drop[open] summary:focus:after {
+    background-image: url("../images/svg/chevron-right-white.svg");
+}
+
+.details-link-drop[open] summary:after {
+    background-image: url("../images/svg/chevron-right-white.svg");
+}
+
+.person {
+    position: relative;
+    font-size: 14px;
+}
+
+.person-out {
+    cursor: pointer;
+}
+
+.logout {
+    position: absolute;
+    display: none;
+    font-size: 0;
+    top: 48%;
+    right: -105%;
+    border: 2px solid rgb(222, 226, 230);
+    background-color: rgb(234, 235, 238);
+    border-radius: 5px;
+    transition: .3s ease;
+}
+
+.logout:hover {
+    background-color: rgb(222, 226, 230);
+}
+
+.logout-open {
+    display: block;
+    font-size: 100%;
+}
+
+.section-content {
+    margin-top: calc(4.5rem + 4rem);
+}
+
+.btn:focus, .btn:hover {
+    background-color: rgb(164, 173, 182);
+    color: white;
+    outline: none;
+}
+
+.modal {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    z-index: 2;
+    transform: scale(0) rotateX(180deg);
+    transition: .7s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+    will-change: opacity, transform;
+}
+
+.modal div {
+    max-width: 550px;
+    margin: 15px;
+}
+
+.modal.open {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1) rotateX(0deg);
+}
+
+.modal-text p {
+    font-size: 20px;
+}
+
+.active-link {
+    background-color: #007bff;
+    color: white;
+    outline: none;
+}
+
+.link-sidebar.active-link .icon-link, .link-sidebar.active-link .icon-link {
+    filter: brightness(0) invert(1);
+}
+
+#inputDate {
+    cursor: pointer;
+    border-radius: 6px!important;
+}
+
+input[type="number"] {
+    cursor: pointer;
+    border-radius: 6px!important;
+}
+
+@media (max-width: 768px) {
+    .details-link-drop summary:after {
+        right: 0;
+    }
+
+    .person figure {
+        text-align: start;
+    }
+
+    .person figure p {
+        max-width: max-content;
+    }
+
+    .logout {
+        top: 105%;
+        right: 0;
+        z-index: 2;
+    }
+
+    .section-content {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .card-box {
+        justify-content: center;
+    }
+
+    .modal-text p {
+        font-size: 14px;
+    }
+
+    .modal-action {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .modal-action .btn {
+        font-size: 14px;
+    }
+}

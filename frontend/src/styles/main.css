@@ -1,0 +1,35 @@
+@import 'common.css';
+
+.input-wrap {
+    max-width: 160px;
+}
+
+.btn-main {
+    max-width: 100px;
+    border: 1px solid rgb(108, 117, 125);
+    border-radius: 4px;
+}
+
+canvas {
+    max-width: 630px;
+    max-height: 630px;
+    min-width: 300px !important;
+    min-height: 300px !important;
+}
+
+.border-chart {
+    border-right: 2px solid rgb(222, 226, 230);
+}
+
+@media (max-width: 992px) {
+    .border-chart {
+        border-right: none;
+        border-bottom: 2px solid rgb(222, 226, 230);
+    }
+}
+
+@media (max-width: 768px) {
+    .section-content h1 {
+        text-align: center;
+    }
+}

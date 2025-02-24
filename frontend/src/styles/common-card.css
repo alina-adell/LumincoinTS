@@ -1,0 +1,24 @@
+.card {
+  max-width: 350px;
+  width: 100%;
+}
+
+.btn-add-revenue {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  min-height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 968px) {
+  .card {
+    max-width: 310px;
+  }
+
+  .btn-add-revenue {
+    max-width: 310px;
+  }
+}

@@ -1,0 +1,12 @@
+@import '../common.css';
+
+.card {
+  max-width: 400px;
+  width: 100%;
+}
+
+@media (max-width: 968px) {
+  .card {
+    max-width: 310px;
+  }
+}

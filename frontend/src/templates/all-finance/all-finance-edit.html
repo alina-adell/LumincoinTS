@@ -1,0 +1,31 @@
+<h1 class="mb-5 mt-2 mt-md-0">Редактирование дохода/расхода</h1>
+<div class="card-box d-flex flex-wrap gap-4">
+  <div class="card border-0">
+    <div class="card-body p-0 flex-grow-1">
+      <fieldset class="input-group mb-3">
+        <select id="selectType" class="form-control">
+          <option value="income">доход</option>
+          <option value="expense">расход</option>
+        </select>
+      </fieldset>
+      <fieldset class="input-group mb-3">
+        <select id="selectCategory" class="form-control"></select>
+      </fieldset>
+      <fieldset class="input-group mb-3">
+        <input id="inputAmount" type="number" class="form-control" placeholder="Сумма в $">
+        <p id="inputAmountFeedback" class="invalid-feedback m-0">Введите сумму</p>
+      </fieldset>
+      <fieldset class="input-group mb-3">
+        <input id="inputDate" type="date" class="form-control">
+        <p id="inputDateFeedback" class="invalid-feedback m-0">Заполните дату в формате ГГГГ-ММ-ДД</p>
+      </fieldset>
+      <fieldset class="input-group mb-4">
+        <input id="inputComment" type="text" class="form-control" placeholder="Комментарий...">
+      </fieldset>
+      <div class="action d-flex flex-column flex-sm-row gap-2">
+        <button id="categorySave" class="btn btn-success">Сохранить</button>
+        <button id="categorySaveBack" class="btn btn-danger">Отмена</button>
+      </div>
+    </div>
+  </div>
+</div>

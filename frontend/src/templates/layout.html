@@ -1,0 +1,60 @@
+<main class="container-fluid w-100 p-0">
+  <div class="layout row w-100 p-0 g-0">
+    <aside class="sidebar col-12 col-md-3 col-lg-2 min-vh-100 border-2 border-end m-0 p-0 d-none d-md-flex flex-column flex-shrink-0">
+      <figure class="text-center pt-5 pb-4 m-0">
+        <img src="images/Logo.png" alt="logo" class="img-fluid">
+      </figure>
+      <section class="menu pt-5 ps-3 pe-3 border-2 border-top h-75 d-flex flex-column justify-content-between">
+        <div class="link-container ps-2">
+          <a href="#/main" class="link-sidebar text-decoration-none p-2 d-flex align-items-center rounded flex-grow-1"><img src="images/svg/house.svg" class="icon-link me-2 img-fluid" alt="home">Главная</a>
+          <a href="#/all-finance" class="link-sidebar text-decoration-none p-2 d-flex align-items-center rounded flex-grow-1"><img src="images/svg/cash-coin.svg" class="icon-link me-2 img-fluid" alt="coin">Доходы & Расходы</a>
+          <details class="details-link-drop">
+            <summary class="p-2 position-relative rounded">Категории</summary>
+            <a href="#/revenues" class="link-sidebar text-decoration-none d-block p-2 rounded">Доходы</a>
+            <a href="#/expenses" class="link-sidebar text-decoration-none d-block p-2 rounded">Расходы</a>
+          </details>
+        </div>
+        <p class="balance ps-2">Баланс: <span class="text-primary"><span class="balance-number"></span>$</span></p>
+      </section>
+      <section class="person border-2 border-top mb-3">
+        <figure class="person-out d-flex align-items-center m-0 ps-3 pe-3 pt-4 mb-auto" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+          <img src="images/person-icon.png" alt="person-icon" class="img-fluid">
+          <p class="user-name m-0 ms-3"></p>
+        </figure>
+        <fieldset class="logout w-100 p-1">
+          <a href="#/logout" class="w-100 p-1">Выйти</a>
+        </fieldset>
+      </section>
+    </aside>
+
+    <header class="d-md-none pt-3 pb-0 bg-light border-2 border-bottom">
+      <div class="text-center">
+        <img src="images/Logo.png" alt="logo" class="img-fluid">
+      </div>
+      <div class="text-center" id="mobileMenu">
+        <nav class="nav d-flex justify-content-center">
+          <a href="#/main" class="link-sidebar text-decoration-none p-2 rounded">Главная</a>
+          <a href="#/all-finance" class="link-sidebar p-2 rounded">Доходы & Расходы</a>
+          <details class="details-link-drop">
+            <summary class="p-2 pe-4 position-relative rounded">Категории</summary>
+            <a href="#/revenues" class="link-sidebar text-decoration-none d-block p-2 rounded">Доходы</a>
+            <a href="#/expenses" class="link-sidebar text-decoration-none d-block p-2 rounded">Расходы</a>
+          </details>
+        </nav>
+        <p class="balance pt-3 pb-3 m-0">Баланс: <span class="text-primary"><span class="balance-number"></span>$</span></p>
+        <section class="person border-2 border-top d-flex justify-content-center">
+          <figure class="person-out d-flex align-items-center justify-content-center m-0 p-3 w-100">
+            <img src="images/person-icon.png" alt="person-icon" class="img-fluid">
+            <p class="user-name m-0 ms-3"></p>
+          </figure>
+          <fieldset class="logout w-100 p-1">
+            <a href="#/logout" class="text-decoration-none w-100 p-1">Выйти</a>
+          </fieldset>
+        </section>
+      </div>
+    </header>
+
+    <section id="contentLayout" class="col-12 col-md-9 col-lg-10 ms-0 me-0 ms-md-auto me-md-auto ps-3 pe-3 pb-0 section-content"></section>
+
+  </div>
+</main>
