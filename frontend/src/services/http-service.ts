@@ -1,9 +1,9 @@
-import {AuthUtils} from "../utils/auth-utils.js";
+import {AuthUtils} from "../utils/auth-utils";
 
 export class HttpService {
-  static async request(url, method = 'GET', body = null) {
+  public static async request(url: string, method: string = 'GET', body: any = null): Promise<any> {
 
-    const params = {
+    const params: any = {
       method: method,
       headers: {
         'Content-Type': 'application/json',
@@ -11,7 +11,7 @@ export class HttpService {
       }
     };
 
-    let token = localStorage.getItem(AuthUtils.accessTokenKey);
+    let token: string | null = localStorage.getItem(AuthUtils.accessTokenKey);
     if (token) {
       params.headers['x-auth-token'] = token;
     }
@@ -20,18 +20,18 @@ export class HttpService {
       params.body = JSON.stringify(body);
     }
 
-    const response = await fetch(url, params);
+    const response: Response = await fetch(url, params);
 
     if (response.status < 200 || response.status >= 300) {
       if (response.status === 401) {
-        const result = await AuthUtils.updateTokens();
+        const result: boolean = await AuthUtils.updateTokens();
         if (result) {
           return await this.request(url, method, body);
         } else {
           return null;
         }
       }
-      throw new Error(response.statusMessage);
+      throw new Error(response.statusText);
     }
     return await response.json();
   }

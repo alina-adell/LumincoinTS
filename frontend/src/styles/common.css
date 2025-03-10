@@ -112,6 +112,7 @@ a {
 
 .logout {
     position: absolute;
+    z-index: 2;
     display: none;
     font-size: 0;
     top: 48%;

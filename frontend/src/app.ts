@@ -1,13 +1,15 @@
-import {Router} from "./router.js";
+import {Router} from "./router";
 
 class App {
+  private router: Router;
+
   constructor() {
     this.router = new Router();
     window.addEventListener('DOMContentLoaded', this.routeChanging.bind(this));
     window.addEventListener('popstate', this.routeChanging.bind(this));
   }
 
-  routeChanging() {
+  private routeChanging(): void {
     this.router.openRoute().then();
   }
 }

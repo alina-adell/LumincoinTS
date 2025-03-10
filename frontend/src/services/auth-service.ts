@@ -1,7 +1,7 @@
 export class AuthService {
-  static async request(url, method = 'GET', body = null) {
+  static async request(url: string, method: string = 'GET', body: any = null): Promise<any> {
 
-    const params = {
+    const params: any = {
       method: method,
       headers: {
         'Content-Type': 'application/json',
@@ -11,9 +11,9 @@ export class AuthService {
     if (body) {
       params.body = JSON.stringify(body);
     }
-    const response = await fetch(url, params);
+    const response: Response = await fetch(url, params);
     if (response.status < 200 && response.status >= 300) {
-      throw new Error(response.statusMessage);
+      throw new Error(response.statusText);
     }
     return await response.json();
   }
